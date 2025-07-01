@@ -16,8 +16,7 @@ def copy_file(command: str) -> None:
         return
 
     try:
-        with (open(file, "r") as file_in,
-              open(new_file, "w") as file_out):
+        with open(file, "r") as file_in, open(new_file, "w") as file_out:
             content = file_in.read()
             file_out.write(content)
 
